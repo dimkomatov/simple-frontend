@@ -12,11 +12,6 @@ const server = http.createServer(function (req, res) {
     }
 });
 
-const hostname = '127.0.0.1';
-const port = process.env.PORT || 3000;
-
 console.log('port = ', process.env.PORT)
 
-server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
-});
+server.listen(process.env.PORT || 3000)
